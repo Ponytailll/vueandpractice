@@ -11,3 +11,19 @@ ul li{
 .fl {
   float: left;
 }
+.clear {
+  clear: both
+}
+.message{
+  position: relative;
+  width: 136px;
+  height: 50px;
+  top: -300px;
+  margin: 0 auto;
+  line-height: 50px;
+  text-align: center;
+  background: #24c070;
+  color: white;
+  font-size: 14px;
+  z-index: 4;
+}

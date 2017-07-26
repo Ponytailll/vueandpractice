@@ -43,7 +43,7 @@
       }
   }
 </script>
-<style>
+<style scoped>
   @import "../../../css/public.css";
   .agency-head{
     background: #d0d3d0;;
@@ -72,7 +72,7 @@
     height: 70px;
   }
   .agency-nav {
-    /*padding: 20px 0 0 38px;*/
+    padding: 20px 0 0 38px;
     height: 40px;
     position: relative;
   }

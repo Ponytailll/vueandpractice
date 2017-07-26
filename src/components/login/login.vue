@@ -1,16 +1,19 @@
 <template>
-  <div class="login-form">
-      <div class="login-tab login-tab-l" @click="loginTab">账号登录</div>
-      <div class="login-tab login-tab-r">扫码登录</div>
-    <div class="login-content">
-      <ul>
-        <li>账号：<input type="text"/></li>
-        <li> 密码：<input type="text"/></li>
-      </ul>
+  <div>
+    <div class="login-form">
+        <div class="login-tab login-tab-l" @click="loginTab">账号登录</div>
+        <div class="login-tab login-tab-r">扫码登录</div>
+      <div class="login-content">
+        <ul>
+          <li>账号：<input type="text"/></li>
+          <li> 密码：<input type="text"/></li>
+        </ul>
+      </div>
+      <div class="login-button">
+        <button @click="loginClick">登录</button>
+      </div>
     </div>
-    <div class="login-button">
-      <button @click="loginClick">登录</button>
-    </div>
+    <!--<div class="message">登录成功</div>-->
   </div>
 </template>
 <script>
@@ -20,17 +23,56 @@
       return {
       }
     },
+    created:function(){
+        /**刚进入页面的时候请求的接口**/
+      this.loginAxios();
+    },
     methods:{
+        loginAxios:function () {
+//            let str = {
+//              username: '15605181765',
+//              password: '123456'
+//            };
+//            this.$http.post('http://172.28.184.75:9091/api/custcenter/login',str).then(m=>console.log(m.data));
+        },
         loginTab:function () {
 
         },
         loginClick:function () {
-          alert("登录成功")
+          let that =this;
+          let str = {
+              username: '15605181765',
+              password: '123456'
+            };
+
+            this.axios({
+            method: 'post',
+            url: 'http://172.28.184.75:9091/api/custcenter/login',
+            data:str
+            }).then(function (response) {
+                  console.log(response);
+                  if(response.status == 200){
+//                    message.textContent="登录成功";
+                    that.$router.push('/');
+                  }else {
+                    let message=document.createElement('div');
+                    message.className='message';
+                    document.body.appendChild(message);
+                    setTimeout(function () {
+                      document.body.removeChild(message);
+                    },2000);
+                    message.textContent="登录失败";
+                  }
+            }).catch(function (error) {
+              console.log(error);
+            });
+
+//          $(".message").css("display","block");
       }
     }
   }
 </script>
-<style>
+<style scoped>
   @import "../../../css/public.css";
   .login-form{
     position: relative;
@@ -80,4 +122,5 @@
     position: relative;
     text-align: center
   }
+
 </style>
