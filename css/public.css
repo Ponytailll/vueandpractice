@@ -1,6 +1,9 @@
-body,html,ul,li,div,span,a{
+body,html,ul,li,div,span,a,p,input, textarea{
   margin: 0;
   padding: 0;
+}
+body,button,input,select,textarea{
+  font: 12px/1.6 tahoma,arial,sans-serif;
 }
 button{
   cursor: pointer;
@@ -13,6 +16,25 @@ ul li{
 }
 .clear {
   clear: both
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  font-size: 0;
+  clear: both;
+  visibility: hidden;
+}
+input, textarea {
+  outline: none;
+}
+a img {
+  border: 0;
+  vertical-align: middle;
+}
+a {
+  text-decoration: none;
+  color: #333;
 }
 .message{
   position: relative;
