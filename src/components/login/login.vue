@@ -66,7 +66,7 @@
                 </div>
                 <!-- 无密码 end -->
                 <div class="lg_login clearfix">
-                  <input type="submit" value="登录" class="sub">
+                  <input  value="登录" @click="loginClick" class="sub">
                 </div>
                 <div class="ot_login">
                   <div class="ot_btn clearfix">
@@ -122,6 +122,11 @@
 
       },
       loginClick:function () {
+        let loginAccount= $("input[name='uname']").val();
+        if(loginAccount == ''){
+              $(".error_tip").css("display","block");
+              return;
+        }
         let that =this;
         let str = {
           username: '15605181765',
@@ -292,7 +297,8 @@
   }
   .lg_login .sub {
     display: inline;
-    float: left;
+    text-align: center;
+    /*float: left;*/
     border: none;
     width: 314px;
     height: 40px;
