@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <v-header></v-header>
+    <v-gdHeader></v-gdHeader>
     <v-article></v-article>
   </div>
 </template>
@@ -8,6 +8,7 @@
 <script>
   import header from './header/header.vue'
   import article from './article/article.vue'
+  import gdHeader from './header/gd-header.vue'
 export default {
   name: 'homePage',
   data () {
@@ -17,6 +18,7 @@ export default {
   components: {
     'v-header': header,
     'v-article': article,
+    'v-gdHeader': gdHeader,
   }
 }
 </script>

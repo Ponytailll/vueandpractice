@@ -5,6 +5,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Login from './../components/login/login.vue'
 import Regist from './../components/regist/regist.vue'
+import Test from './../components/test/test.vue'
 import HomePage from '@/components/HomePage'
 
 Vue.use(VueRouter)
@@ -25,6 +26,10 @@ export default new VueRouter({
     {
       path: '/regist',
       component: Regist
+    },
+    {
+      path: '/test',
+      component: Test
     }
   ]
 })

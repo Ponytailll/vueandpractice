@@ -1,20 +1,4 @@
 <template>
-  <!--<div>
-    <div class="login-form">
-        <div class="login-tab login-tab-l" @click="loginTab">账号登录</div>
-        <div class="login-tab login-tab-r">扫码登录</div>
-      <div class="login-content">
-        <ul>
-          <li>账号：<input type="text"/></li>
-          <li> 密码：<input type="text"/></li>
-        </ul>
-      </div>
-      <div class="login-button">
-        <button @click="loginClick">登录</button>
-      </div>
-    </div>
-    &lt;!&ndash;<div class="message">登录成功</div>&ndash;&gt;
-  </div>-->
   <div class="login_wrap">
   <div class="logo_wrap">
       <div class="logo">
