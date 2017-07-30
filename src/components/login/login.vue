@@ -1,20 +1,4 @@
 <template>
-  <!--<div>
-    <div class="login-form">
-        <div class="login-tab login-tab-l" @click="loginTab">账号登录</div>
-        <div class="login-tab login-tab-r">扫码登录</div>
-      <div class="login-content">
-        <ul>
-          <li>账号：<input type="text"/></li>
-          <li> 密码：<input type="text"/></li>
-        </ul>
-      </div>
-      <div class="login-button">
-        <button @click="loginClick">登录</button>
-      </div>
-    </div>
-    &lt;!&ndash;<div class="message">登录成功</div>&ndash;&gt;
-  </div>-->
   <div class="login_wrap">
   <div class="logo_wrap">
       <div class="logo">
@@ -78,7 +62,7 @@
                 </div>
                 <div class="lg_reg">
                   <a class="findpwd" href="">忘记密码</a>
-                  <a class="regist" href="">免费注册</a>
+                  <a class="regist" @click="regist">免费注册</a>
                 </div>
               </form>
           </div>
@@ -110,6 +94,9 @@
           $(".lo_mod_box").css("display","block");
           $(".lo_mod").addClass("tab_on");
           $(".eb_mod").removeClass("tab_on");
+      },
+      regist:function () {
+        this.$router("/regist");
       },
       loginAxios:function () {
 //            let str = {
