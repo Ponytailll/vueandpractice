@@ -72,6 +72,7 @@
   </div>
 </template>
 <script>
+  import qs from 'qs';
   export default {
 //    name: 'homePage',
     data () {
@@ -80,7 +81,7 @@
     },
     created:function(){
       /**刚进入页面的时候请求的接口**/
-      this.loginAxios();
+//      this.loginAxios();
     },
     methods:{
       phoneLogin:function () {
@@ -110,25 +111,28 @@
       },
       loginClick:function () {
         let loginAccount= $("input[name='uname']").val();
+        let loginPwd= $("input[name='pass']").val();
         if(loginAccount == ''){
               $(".error_tip").css("display","block");
               return;
         }
         let that =this;
-        let str = {
-          username: '15605181765',
-          password: '123456'
-        };
+        let str = qs.stringify({
+          name: loginAccount,
+          pwd:  loginPwd
+        });
 
         this.axios({
           method: 'post',
-          url: 'http://172.28.184.75:9091/api/custcenter/login',
+          headers: {'Content-Type': 'application/x-www-form-urlencoded',},
+//          requestHeader:{'Content-Type':'application/json'},
+          url: 'http://localhost:3000/api/User/User/login',
           data:str
         }).then(function (response) {
           console.log(response);
-          if(response.status == 200){
+          if(response.data.errCode == 0){
 //                    message.textContent="登录成功";
-            that.$router.push('/');
+            that.$router.push('/user');
           }else {
             let message=document.createElement('div');
             message.className='message';

@@ -3,10 +3,11 @@
  */
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import HomePage from '@/components/HomePage'
 import Login from './../components/login/login.vue'
 import Regist from './../components/regist/regist.vue'
 import Test from './../components/test/test.vue'
-import HomePage from '@/components/HomePage'
+import UserCenter from './../components/user/userCenter.vue'
 
 Vue.use(VueRouter)
 
@@ -30,6 +31,10 @@ export default new VueRouter({
     {
       path: '/test',
       component: Test
+    },
+    {
+      path: '/user',
+      component: UserCenter
     }
   ]
 })

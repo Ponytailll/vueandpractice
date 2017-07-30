@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <v-gdHeader></v-gdHeader>
-    <v-article></v-article>
+    <v-gdArticle></v-gdArticle>
   </div>
 </template>
 
@@ -9,7 +9,8 @@
   import header from './header/header.vue'
   import article from './article/article.vue'
   import gdHeader from './header/gd-header.vue'
-export default {
+  import gdArticle from './article/gd-article.vue'
+  export default {
   name: 'homePage',
   data () {
     return {
@@ -19,6 +20,7 @@ export default {
     'v-header': header,
     'v-article': article,
     'v-gdHeader': gdHeader,
+    'v-gdArticle':gdArticle
   }
 }
 </script>

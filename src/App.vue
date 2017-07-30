@@ -16,6 +16,7 @@ import Vueaxios from 'vue-axios'
 
 Vue.use(Vueaxios, axios)
 
+
 export default {
   name: 'app',
   components: {
