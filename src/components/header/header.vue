@@ -8,7 +8,7 @@
       <div class="agency-search">
         <ul class="agency-nav fl">
           <li class="fl">
-            <a>查知产</a>
+            <router-link to="/test"><span>练习</span></router-link>
           </li>
           <li class="fl">
             <a>查企业</a>
@@ -85,14 +85,14 @@
     text-align: center;
     position: relative;
   }
-  .agency-nav li a{
+  .agency-nav li span{
     display: block;
     color: #444;
     font-size: 20px;
     line-height: 30px;
     cursor: pointer;
   }
-  .agency-nav li a:hover{
+  .agency-nav li span:hover{
     color: #f70;
   }
   .agency-BottomlastDiv {

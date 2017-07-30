@@ -19,7 +19,6 @@ Vue.use(Vueaxios, axios)
 export default {
   name: 'app',
   components: {
-//    'v-header': header,
   }
 }
 </script>
