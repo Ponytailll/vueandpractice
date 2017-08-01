@@ -13,7 +13,6 @@ import Vue from 'vue'
 import $ from 'jquery'
 import axios from 'axios'
 import Vueaxios from 'vue-axios'
-
 Vue.use(Vueaxios, axios)
 
 

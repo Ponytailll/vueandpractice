@@ -29,7 +29,8 @@
     data () {
       return {
       }
-    },
+    }
+
   }
 </script>
 

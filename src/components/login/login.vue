@@ -112,7 +112,7 @@
       loginClick:function () {
         let loginAccount= $("input[name='uname']").val();
         let loginPwd= $("input[name='pass']").val();
-        if(loginAccount == ''){
+        if(loginAccount === ''){
               $(".error_tip").css("display","block");
               return;
         }
@@ -129,10 +129,10 @@
           url: 'http://localhost:3000/api/User/User/login',
           data:str
         }).then(function (response) {
-          console.log(response);
-          if(response.data.errCode == 0){
+          if(response.data.errCode === 0){
 //                    message.textContent="登录成功";
             that.$router.push('/user');
+            that.set("isLogin",false);
           }else {
             let message=document.createElement('div');
             message.className='message';
