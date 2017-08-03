@@ -2,6 +2,7 @@
   <div class="hello">
     <v-gdHeader></v-gdHeader>
     <v-gdArticle></v-gdArticle>
+    <v-carousel></v-carousel>
   </div>
 </template>
 
@@ -10,6 +11,7 @@
   import article from './article/article.vue'
   import gdHeader from './header/gd-header.vue'
   import gdArticle from './article/gd-article.vue'
+  import carousel from './carousel/carousel.vue'
   export default {
     name: 'homePage',
     data () {
@@ -20,7 +22,8 @@
       'v-header': header,
       'v-article': article,
       'v-gdHeader': gdHeader,
-      'v-gdArticle':gdArticle
+      'v-gdArticle':gdArticle,
+      'v-carousel':carousel
     },
     //组件实例刚被创建，组件属性计算之前，如data属性等
     beforeCreate:function () {
@@ -69,7 +72,7 @@
     },
     //for keep-alive,组件被激活时调用
     activated:function () {
-      
+
     },
     //for keep-alive,组件被移除时调用
     deactivated:function () {

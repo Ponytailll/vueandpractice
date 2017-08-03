@@ -9,7 +9,7 @@
                   <img src="../../images/gd-header/weibo.png">
               </div>
               <div  class="head-right common-head vm">
-                <div v-if="isLogin">
+                <div v-if="isLogin=true">
                 <router-link to="/login"><span class="span-style herfTo" >登录</span></router-link>
                 <router-link to="/regist"><span class="span-style herfTo">注册</span></router-link>
                 </div>
