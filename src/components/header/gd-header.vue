@@ -39,8 +39,6 @@
 </script>
 <style scoped>
   @import "../../../css/public.css";
-  @import "../../../css/bootstrap.min.css";
-
   .head{
     width: 100%;
     text-align: center;
