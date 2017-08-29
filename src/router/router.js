@@ -8,6 +8,7 @@ import Login from './../components/login/login.vue'
 import Regist from './../components/regist/regist.vue'
 import Test from './../components/test/test.vue'
 import UserCenter from './../components/user/userCenter.vue'
+import gdLogin from './../components/login/gd-login.vue'
 
 Vue.use(VueRouter)
 
@@ -35,6 +36,10 @@ export default new VueRouter({
     {
       path: '/user',
       component: UserCenter
+    },
+    {
+      path:'/gdLogin',
+      component:gdLogin
     }
   ]
 })

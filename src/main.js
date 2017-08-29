@@ -6,7 +6,7 @@ import router from './router/router'
 import 'font-awesome/css/font-awesome.css'
 import '../css/bootstrap.min.css'
 import  './assets/bootstrap/bootstrap.min.js'
-Vue.config.productionTip = false;
+
 
 /* eslint-disable no-new */
 new Vue({
