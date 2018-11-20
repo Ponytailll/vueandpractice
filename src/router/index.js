@@ -144,6 +144,28 @@ export const constantRouterMap = [
       }
     ]
   },
+  {
+    path: '/activityManage',
+    component: Layout,
+    meta: {
+      title: '活动管理',
+      icon: 'nested'
+    },
+    children: [
+      {
+        path: 'activityList',
+        name: 'activityList',
+        component: () => import('@/views/activityManage/activityList'),
+        meta: { title: '活动列表', icon: 'form' }
+      },
+      {
+        path: 'activityDetail',
+        name: 'activityDetail',
+        component: () => import('@/views/activityManage/activityDetail'),
+        meta: { title: '活动详情', icon: 'form' }
+      }
+    ]
+  },
 
   // {
   //   path: '/nested',
